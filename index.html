@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>炭火焼肉 焔 -HOMURA- | 極上の和牛と至高のひととき</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+JP:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+
+    <header class="header">
+      <div class="logo">
+        <span class="logo-accent">炭火焼肉</span> 焔
+        <span class="logo-en">- HOMURA -</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#info">店舗情報</a>
+        <a href="#concept">こだわり</a>
+        <a href="#menu">お品書き</a>
+        <a href="#gallery">店内・お席</a>
+        <a href="#contact" class="nav-cta">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <canvas
+        id="hero-canvas"
+        style="position: absolute; inset: 0; z-index: 1; pointer-events: none"
+      ></canvas>
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="videos/yakiniku.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+
+      <div class="hero-content container">
+        <p class="eyebrow">CHARCOAL GRILL YAKINIKU</p>
+        <h1>至高の厳選和牛を、<br />妥協なき炭火焼きで。</h1>
+        <p class="lead">
+          職人が目利きした最高格付けの黒毛和牛。赤々と燃える備長炭の薫香をまとわせ、秘伝のタレとともに。五感すべてで味わう、極上の焼肉体験をお届けします。
+        </p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#contact">お席・ご宴会のご相談</a>
+          <a class="btn ghost" href="#menu">お品書きを見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="info">
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <p class="section-sub">SHOP INFO</p>
+          <h2>営業時間・アクセス</h2>
+        </div>
+
+        <div class="info-table-wrap">
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>営業日</th>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+                <th class="sat">土</th>
+                <th class="sun">日・祝</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="time-label">夜の部<br />17:00 〜 23:00</td>
+                <td>〇</td>
+                <td class="closed">定休</td>
+                <td>〇</td>
+                <td>〇</td>
+                <td>〇</td>
+                <td class="sat">〇</td>
+                <td class="sun">〇</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-details">
+          <p><strong>【定休日】</strong> 毎週火曜日（祝日の場合は翌水曜日）</p>
+          <p>
+            <strong>【お席】</strong>
+            総席数50席（完全個室、掘りごたつ、カウンター席あり）
+          </p>
+          <p>
+            <strong>【お電話】</strong> 03-XXXX-XXXX（受付時間 15:00〜23:00）
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="concept" class="concept container">
+      <div class="concept-grid">
+        <div class="concept-img-box">
+          <img
+            src="https://placehold.co/800x600/17100f/e3dcdb?text=Concept+Beef"
+            alt="極上の黒毛和牛"
+          />
+        </div>
+        <div class="concept-text-box">
+          <div class="section-title-wrap">
+            <p class="section-sub">OUR COMMITMENT</p>
+            <h2>一期一会の肉質、秘伝のタレ</h2>
+          </div>
+          <p class="concept-desc">
+            「焔」では、特定の産地にこだわらず、その日一番の状態を誇るA5ランク黒毛和牛を独自のルートで一頭買いしています。職人の手切りによって肉の繊維に逆らわず、最も柔らかく旨味を感じられる厚みでご提供します。
+          </p>
+          <ul class="concept-check-list">
+            <li>一頭買いだからこそ実現する、希少部位の数々</li>
+            <li>お肉のポテンシャルを最大限に引き出す職人の「手切り」</li>
+            <li>創業以来つぎ足し続ける、肉のコクを引き立てる醤油タレ</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu container">
+      <div class="section-title-wrap text-center">
+        <p class="section-sub">PREMIUM MENU</p>
+        <h2>焔の贅を尽くしたお品書き</h2>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="card-img-wrap">
+            <img
+              src="https://placehold.co/600x450/17100f/e3dcdb?text=Kalbi"
+              alt="極上カルビ"
+            />
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-header">
+              <h3>特選黒毛和牛 極上カルビ</h3>
+              <p class="menu-price">
+                ¥2,800<span class="tax"> (税込 ¥3,080)</span>
+              </p>
+            </div>
+            <p class="menu-detail">
+              美しいサシが美しく入った、とろけるような食感と上品な脂の甘みが特徴の当店最高峰のカルビです。
+            </p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-img-wrap">
+            <img
+              src="https://placehold.co/600x450/17100f/e3dcdb?text=Tan"
+              alt="厚切りタン"
+            />
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-header">
+              <h3>幻の極厚切り 芯タン</h3>
+              <p class="menu-price">
+                ¥3,200<span class="tax"> (税込 ¥3,520)</span>
+              </p>
+            </div>
+            <p class="menu-detail">
+              1頭から極わずかしか取れない最高級のタン元を、贅沢に極厚カット。サクッとした歯ごたえと溢れる肉汁をどうぞ。
+            </p>
+          </div>
+        </div>
+        <div class="menu-card">
+          <div class="card-img-wrap">
+            <img
+              src="https://placehold.co/600x450/17100f/e3dcdb?text=Yukke"
+              alt="和牛ユッケ"
+            />
+          </div>
+          <div class="menu-card-content">
+            <div class="menu-header">
+              <h3>厳選和牛の極みユッケ</h3>
+              <p class="menu-price">
+                ¥1,800<span class="tax"> (税込 ¥1,980)</span>
+              </p>
+            </div>
+            <p class="menu-detail">
+              認可を取得したクリーンな環境で調理。濃厚なブランド卵の黄身と特製タレが絡み合う、至高の生肉メニュー。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-sheets-wrap">
+        <div class="menu-sheets-title text-center">
+          <h3>お品書き一覧（メニュー帖）</h3>
+          <p>実際のメニュー表を大きく広げてご覧いただけます</p>
+        </div>
+
+        <div class="menu-sheets-grid">
+          <div class="menu-sheet-item">
+            <div class="sheet-label">御料理（お肉・コース）</div>
+            <div class="sheet-img-box">
+              <img
+                src="https://placehold.co/800x1130/17100f/e3dcdb?text=Menu+Sheet+01"
+                alt="お品書き 用紙1枚目"
+              />
+            </div>
+          </div>
+          <div class="menu-sheet-item">
+            <div class="sheet-label">御飲物・甘味（ドリンク・デザート）</div>
+            <div class="sheet-img-box">
+              <img
+                src="https://placehold.co/800x1130/17100f/e3dcdb?text=Menu+Sheet+02"
+                alt="お品書き 用紙2枚目"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="section-title-wrap text-center">
+          <p class="section-sub">AMBIANCE</p>
+          <h2>大人のための上質な空間</h2>
+        </div>
+      </div>
+
+      <div class="gallery-hybrid-slider" id="gallery-slider">
+        <div class="gallery-slider-track" id="gallery-track">
+          <div class="gallery-card">
+            <div class="card-img-wrap">
+              <img
+                src="https://placehold.co/600x400/17100f/e3dcdb?text=Room+1"
+                alt="完全個室"
+                draggable="false"
+              />
+            </div>
+            <p>接待や記念日に最適な【完全個室】（2〜8名様）</p>
+          </div>
+          <div class="gallery-card">
+            <div class="card-img-wrap">
+              <img
+                src="https://placehold.co/600x400/17100f/e3dcdb?text=Room+2"
+                alt="掘りごたつ"
+                draggable="false"
+              />
+            </div>
+            <p>足を伸ばしてくつろげる、広々とした【掘りごたつ席】</p>
+          </div>
+          <div class="gallery-card">
+            <div class="card-img-wrap">
+              <img
+                src="https://placehold.co/600x400/17100f/e3dcdb?text=Room+3"
+                alt="カウンター"
+                draggable="false"
+              />
+            </div>
+            <p>デートや特等席として人気の【無煙ダクト付きカウンター】</p>
+          </div>
+          <div class="gallery-card">
+            <div class="card-img-wrap">
+              <img
+                src="https://placehold.co/600x400/17100f/e3dcdb?text=Wine+Cellar"
+                alt="ワインセラー"
+                draggable="false"
+              />
+            </div>
+            <p>お肉とのマリアージュを楽しむ【大型ワインセラー】</p>
+          </div>
+          <div class="gallery-card">
+            <div class="card-img-wrap">
+              <img
+                src="https://placehold.co/600x400/17100f/e3dcdb?text=Room+1"
+                alt="完全個室"
+                draggable="false"
+              />
+            </div>
+            <p>接待や記念日に最適な【完全個室】（2〜8名様）</p>
+          </div>
+          <div class="gallery-card">
+            <div class="card-img-wrap">
+              <img
+                src="https://placehold.co/600x400/17100f/e3dcdb?text=Room+2"
+                alt="掘りごたつ"
+                draggable="false"
+              />
+            </div>
+            <p>足を伸ばしてくつろげる、広々とした【掘りごたつ席】</p>
+          </div>
+          <div class="gallery-card">
+            <div class="card-img-wrap">
+              <img
+                src="https://placehold.co/600x400/17100f/e3dcdb?text=Room+3"
+                alt="カウンター"
+                draggable="false"
+              />
+            </div>
+            <p>デートや特等席として人気の【無煙ダクト付きカウンター】</p>
+          </div>
+          <div class="gallery-card">
+            <div class="card-img-wrap">
+              <img
+                src="https://placehold.co/600x400/17100f/e3dcdb?text=Wine+Cellar"
+                alt="ワインセラー"
+                draggable="false"
+              />
+            </div>
+            <p>お肉とのマリアージュを楽しむ【大型ワインセラー】</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div class="section-title-wrap text-center">
+          <p class="section-sub">CONTACT</p>
+          <h2>ご宴会のご相談・お問い合わせ</h2>
+          <p class="contact-lead-text">
+            団体様のご予算に合わせたコースのご提案、貸切、その他ご質問はこちらよりお寄せください。
+          </p>
+          <p class="contact-phone-notice">
+            ※当日のご来店の確認・お急ぎのご相談はお電話（<strong>03-XXXX-XXXX</strong>）にてお願いいたします。
+          </p>
+        </div>
+        <div class="contact-form">
+          <div class="form-group-row">
+            <div class="form-group">
+              <input type="text" placeholder="お名前" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" placeholder="お電話番号" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="メールアドレス" required />
+          </div>
+          <div class="form-group">
+            <select required>
+              <option value="" disabled selected>ご用件をお選びください</option>
+              <option value="banquet">
+                ご宴会・お席のご相談（予算・人数など）
+              </option>
+              <option value="charter">貸切に関するお問い合わせ</option>
+              <option value="other">その他のお問い合わせ</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea
+              placeholder="詳細（ご希望の日時、人数、アレルギー、ご要望など）をご記入ください"
+              rows="6"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn primary submit-btn">
+            内容を確認して送信する
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-flex">
+        <p class="footer-logo">炭火焼肉 焔 -HOMURA-</p>
+        <p class="footer-copy">&copy; 2026 HOMURA. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
