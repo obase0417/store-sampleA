@@ -639,14 +639,25 @@ h2 {
 }
 
 /* ==========================================================================
-   Responsive Settings
+   Responsive Media Queries (ロゴ文字復活＆ボタン常時表示＆見切れ完全防止)
    ========================================================================== */
 @media (max-width: 960px) {
-  .container {
-    padding: 0 24px;
+  /* タブレットサイズ：ヘッダーの余白と文字を少し小さく */
+  .header {
+    padding: 16px 3%;
   }
+  .logo {
+    font-size: 1.35rem;
+  }
+  .nav-links {
+    gap: 16px; /* ボタン同士の間隔を少し狭める */
+  }
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
   .hero-content h1 {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
   }
   .concept-grid {
     grid-template-columns: 1fr;
@@ -659,6 +670,31 @@ h2 {
 }
 
 @media (max-width: 768px) {
+  /* 小さめのタブレットサイズ */
+  .header {
+    padding: 14px 2%;
+  }
+  .logo {
+    font-size: 1.15rem;
+  }
+  .logo-accent {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+  }
+  .logo-en {
+    font-size: 0.65rem;
+  }
+  .nav-links {
+    gap: 8px; /* 間隔をさらにタイトに */
+  }
+  .nav-links a {
+    font-size: 0.78rem;
+    padding: 4px 6px;
+  }
+  .nav-links a.nav-cta {
+    padding: 6px 10px;
+  }
+
   .menu-sheets-wrap {
     margin-top: 50px;
     padding-top: 40px;
@@ -680,16 +716,70 @@ h2 {
   .contact {
     padding: 70px 0;
   }
+
+  /* 1. スマホサイズ：すべての文字・すべてのボタンを表示したまま、極限まで調整 */
   .header {
-    padding: 14px 20px;
-  }
-  .logo {
-    font-size: 1.2rem;
-  }
-  .nav-links {
-    display: none;
+    padding: 10px 4px; /* 左右の余白をさらに詰め、横幅を最大活用 */
   }
 
+  /* ロゴまわりの完全調整 */
+  .logo {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    min-width: max-content; /* ロゴが途中で意図せず改行されるのを防ぐ */
+  }
+  .logo-accent {
+    font-size: 0.5rem;
+    letter-spacing: 0;
+    display: block; /* 「炭火焼肉」を上に乗せて横幅を節約 */
+  }
+  .logo-en {
+    display: inline-block !important; /* display: none を撤回し、確実に表示 */
+    font-size: 0.55rem; /* 小さく上品に配置 */
+    letter-spacing: 0;
+    margin-left: 2px;
+    color: #a39a99; /* 他の文字と被らないよう馴染む色合いに */
+  }
+
+  /* 全ボタンを横並びで表示 */
+  .nav-links {
+    display: flex !important;
+    gap: 2px; /* ボタン同士の隙間を極限までタイトに */
+  }
+  .nav-links a {
+    font-size: 0.68rem; /* 文字サイズをわずかに縮小して収まりを最適化 */
+    padding: 4px 3px; /* 内側の左右余白をタイトに */
+    letter-spacing: -0.04em; /* 文字間隔を少しだけ詰めてはみ出しを防止 */
+  }
+  .nav-links a.nav-cta {
+    padding: 5px 5px;
+    font-size: 0.68rem;
+    background: #b91c1c; /* お問い合わせボタンは赤背景で強調 */
+  }
+
+  /* 2. 営業時間の見切れ防止（横スクロールの導入） */
+  .info-table-wrap {
+    width: 100%;
+    overflow-x: auto; /* 横幅からはみ出た部分をスワイプでスクロール可能に */
+    -webkit-overflow-scrolling: touch; /* スマホでのスクロールを滑らかにする */
+    border: 1px solid #332220;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+  .info-table {
+    min-width: 520px; /* テーブルがこれ以上潰れて文字が重ならないよう、安全な横幅を確保 */
+  }
+  .info-table th,
+  .info-table td {
+    padding: 10px 4px;
+    font-size: 0.85rem;
+  }
+  .time-label {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  /* その他スマホレイアウト調整 */
   .hero-content {
     padding: 30px 20px;
   }
@@ -717,25 +807,26 @@ h2 {
     font-size: 1.6rem;
   }
   .section-title-wrap {
-    margin-bottom: 30px;
+    margin-bottom: 34px;
+  }
+
+  .info-details {
+    padding: 24px;
   }
 
   .menu-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
   .menu-card .card-img-wrap {
-    height: 180px;
-  }
-  .menu-card-content {
-    padding: 20px;
+    height: 200px;
   }
 
   .gallery-card {
     width: 260px;
   }
   .card-img-wrap {
-    height: 160px;
+    height: 180px;
   }
 
   .form-group-row {
@@ -743,7 +834,7 @@ h2 {
     gap: 0;
   }
   .contact-form {
-    padding: 25px 20px;
+    padding: 30px 20px;
   }
   .contact input,
   .contact select,
@@ -752,12 +843,33 @@ h2 {
     font-size: 0.9rem;
   }
   .submit-btn {
-    padding: 15px;
+    padding: 16px;
   }
 
   .footer-flex {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     text-align: center;
+  }
+}
+
+/* 3. 横幅が非常に狭い極小スマホ（画面幅390px以下）向けの超微調整 */
+@media (max-width: 390px) {
+  .logo {
+    font-size: 0.8rem;
+  }
+  .logo-accent {
+    font-size: 0.45rem;
+  }
+  .logo-en {
+    font-size: 0.5rem;
+  }
+  .nav-links a {
+    font-size: 0.62rem;
+    padding: 4px 1px;
+  }
+  .nav-links a.nav-cta {
+    padding: 4px 3px;
+    font-size: 0.62rem;
   }
 }
